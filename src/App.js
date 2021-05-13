@@ -1,8 +1,10 @@
 import './App.css';
+import React from 'react';
+import CountriesContainer from "./containers/CountriesContainer"
 
 function App() {
   return (
-    <h1>Hello World!</h1>
+    <CountriesContainer/>
   );
 }
 
