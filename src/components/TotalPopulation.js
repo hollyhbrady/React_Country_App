@@ -2,13 +2,14 @@ import React from 'react';
 
 const TotalPopulation = ({countries}) => {
     
-    let total = countries.population.reduce((popTotal, country) => {popTotal += country}, 0)
-        return <Total country={country}/>
-
+    let total = countries.reduce((popTotal, country) => {
+        popTotal += country.population
+        return popTotal
+    }, 0)
+        
     return (
-            <h3>Total Population: {Total}</h3>
-        )
-         
+        <h3>Total Population: {total}</h3>
+    )     
 }
 
 export default TotalPopulation;
