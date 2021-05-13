@@ -1,12 +1,12 @@
 import React from 'react';
 
-const CountryItem = ({country}) => {
+const CountryItem = ({country, onCountryClick}) => {
 
+    const handleClick = function(){
+        onCountryClick(country);
+      }
 
-    return <li>
-        {country.name} <br />
-        Population: {country.population}
-    </li>
+    return <li onClick={handleClick}>{country.name}</li>
         
 }
 
